@@ -11,9 +11,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            SqlConnection con = new SqlConnection(@"Persist Security Info = True; data source = localhost\SQLEXPRESS;User= anikev;Password = 1; initial catalog = LearnDb");
-            con.Open();
-    
+            //SqlConnection con = new SqlConnection(@"Persist Security Info = True; data source = localhost\SQLEXPRESS;User= sa;Password = Sa1");
+            //SqlConnection con = new SqlConnection(@"Persist Security Info = True; data source = server=(localdb)\\v11.0");
+
+            //con.Open();
+            Console.WriteLine("Connected Cucsess");
+            Console.ReadKey();
+
 
 
 
