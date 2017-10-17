@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1
+namespace ConsoleApp1
 {
     using System;
     using System.Data.Entity;
@@ -6,19 +6,19 @@
 
     public class dbContext : DbContext
     {
-        // Контекст настроен для использования строки подключения "dbContext" из файла конфигурации  
-        // приложения (App.config или Web.config). По умолчанию эта строка подключения указывает на базу данных 
-        // "ConsoleApp1.dbContext" в экземпляре LocalDb. 
+        // Your context has been configured to use a 'dbContext' connection string from your application's 
+        // configuration file (App.config or Web.config). By default, this connection string targets the 
+        // 'ConsoleApp1.dbContext' database on your LocalDb instance. 
         // 
-        // Если требуется выбрать другую базу данных или поставщик базы данных, измените строку подключения "dbContext" 
-        // в файле конфигурации приложения.
+        // If you wish to target a different database and/or database provider, modify the 'dbContext' 
+        // connection string in the application configuration file.
         public dbContext()
             : base("name=dbContext")
         {
         }
 
-        // Добавьте DbSet для каждого типа сущности, который требуется включить в модель. Дополнительные сведения 
-        // о настройке и использовании модели Code First см. в статье http://go.microsoft.com/fwlink/?LinkId=390109.
+        // Add a DbSet for each entity type that you want to include in your model. For more information 
+        // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }

@@ -10,3 +10,15 @@ F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyRefer
 F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\EntityFramework.dll
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\EntityFramework.xml
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.xml
+C:\GIT\Learn\WebApp\ConsoleApp1\bin\Debug\ru\EntityFramework.resources.dll
+C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

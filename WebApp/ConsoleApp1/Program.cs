@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,25 +12,35 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //SqlConnection con = new SqlConnection(@"Persist Security Info = True; data source = localhost\SQLEXPRESS;User= sa;Password = Sa1");
-            //SqlConnection con = new SqlConnection(@"Persist Security Info = True; data source = server=(localdb)\\v11.0");
-
-            //con.Open();
-            Console.WriteLine("Connected Cucsess");
-            Console.ReadKey();
-
-
-
-
-
+            using (var context = new dbContext())
+            {
+                GetConnect();
+                Employee anikev = new Employee
+                {
+                    Name = "Аникьев Петр Александрович",
+                    Department = "АСУП",
+                    JobTitle = "Программист"
+                };
 
 
+                context.Employees.Add(anikev);
+                context.SaveChanges();
+            }
+        
 
-
-
-            //const string providerName = "System.Data.SqlClient";
-            //const string serverName = @"localhost\SQLEXPRESS;";
-            //string databasePach
+           
         }
-    }  
+
+        static void GetConnect()
+        {
+            var connectionString = ConfigurationManager.ConnectionStrings["dbContext"].ConnectionString;
+            var con = new SqlConnection(connectionString);
+            con.Open();
+            Console.WriteLine("ConnectionString: {0}",
+                    con.ConnectionString);
+        }
+
+       
+    }
+
 }
