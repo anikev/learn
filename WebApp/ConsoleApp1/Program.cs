@@ -15,15 +15,11 @@ namespace ConsoleApp1
             using (var context = new dbContext())
             {
                 GetConnect();
-                Employee anikev = new Employee
-                {
-                    Name = "Аникьев Петр Александрович",
-                    Department = "АСУП",
-                    JobTitle = "Программист"
-                };
+                Console.WriteLine("Connect cucess!");
+                SampleEmployee progr = new SampleEmployee();
+                
 
-
-                context.Employees.Add(anikev);
+                context.Employees.AddRange(progr.programmers);
                 context.SaveChanges();
             }
         
