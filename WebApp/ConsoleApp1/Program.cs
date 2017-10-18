@@ -17,10 +17,21 @@ namespace ConsoleApp1
                 GetConnect();
                 Console.WriteLine("Connect cucess!");
                 SampleEmployee progr = new SampleEmployee();
-                
+
 
                 context.Employees.AddRange(progr.programmers);
                 context.SaveChanges();
+                List<Employee> list = progr.programmers.ToList(); 
+
+                foreach ( Employee ofList in list)
+                {
+                    Console.WriteLine("\t" + ofList.Name + "\t" +ofList.Department +"\t" + ofList.JobTitle);
+                }
+
+
+
+                Console.WriteLine("");
+                Console.ReadKey();
             }
         
 
