@@ -13,8 +13,9 @@ namespace ConsoleApp1
         public string JobTitle { get; set; }
         public string Department { get; set; }
         public DateTime? EmploymentDateFrom { get; set; }
+        public string TestField { get; set; }
+        
 
-        public List<Department> Departments { get; set; }
 
     }
     public class Department
@@ -22,7 +23,6 @@ namespace ConsoleApp1
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public Employee Employee { get; set; }
     }
 
 }
