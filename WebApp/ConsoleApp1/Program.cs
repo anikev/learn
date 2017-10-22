@@ -17,10 +17,11 @@ namespace ConsoleApp1
             using (var context = new dbContext())
             {
                 //SampleEmployee progr = new SampleEmployee();
-                var Emp = context.Employees.ToList();
+                IQueryable<Employee> fggg = context.Employees;
                 //List<Employee> list = Emp.ToList();
+                fggg = fggg.Where(f => f.Name.StartsWith("а"));
 
-                foreach (Employee ofList in Emp)
+                foreach (var ofList in fggg)
                 {
                     Console.WriteLine(ofList.Id + "\t" + ofList.Name + "\t" + ofList.Department + "\t" + ofList.JobTitle);
                 }
@@ -96,6 +97,7 @@ namespace ConsoleApp1
             static void GetConnect()
             {
                 var connectionString = ConfigurationManager.ConnectionStrings["dbContext"].ConnectionString;
+            
                 var con = new SqlConnection(connectionString);
                 con.Open();
             }
