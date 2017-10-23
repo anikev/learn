@@ -16,16 +16,19 @@ namespace ConsoleApp1
         {
             using (var context = new dbContext())
             {
-                //SampleEmployee progr = new SampleEmployee();
-                IQueryable<Employee> fggg = context.Employees;
-                //List<Employee> list = Emp.ToList();
-                fggg = fggg.Where(f => f.Name.StartsWith("а"));
+                
+                
+                
 
-                foreach (var ofList in fggg)
+                IEnumerable<Employee> fggg2 = context.Employees;
+                fggg2 = fggg2.Select(s => s);
+
+                foreach (var ofList in fggg2)
                 {
                     Console.WriteLine(ofList.Id + "\t" + ofList.Name + "\t" + ofList.Department + "\t" + ofList.JobTitle);
                 }
                 Console.WriteLine("Запрос был выполнен инициализацией List");
+                // context.Employees.Remove();
                 Console.ReadKey();
                 string str = "";
                 GetConnect();
@@ -50,75 +53,88 @@ namespace ConsoleApp1
                     case 4:
                         Test();
                         break;
-                }
-                Console.ReadLine();
-            }
-        }
 
+                }
+            }
+            Console.ReadLine();
+        }
 
         static void AddEmployee()
+        {
+            using (var context = new dbContext())
             {
-                using (var context = new dbContext())
-                {
-                    SampleEmployee progr = new SampleEmployee();
-                    context.Employees.AddRange(progr.programmers);
-                    context.SaveChanges();
-                }
-            }
-
-            static void GetDataLinq()
-            {
-                using (var context = new dbContext())
-                {
-                    var listOfEmp = from ls in context.Employees select ls;
-
-                    foreach (var s in listOfEmp)
-                    {
-                        Console.WriteLine(s.Name);
-                    }
-                }
-
-                Console.WriteLine("Запрос был выполнен инициализацией linq");
-            }
-
-            static void GetDataList()
-            {
-                using (var context = new dbContext())
-                {
-                    var lisfOfProgrammers = context.Employees.ToList();
-                    foreach (Employee ofList in lisfOfProgrammers)
-                    {
-                        Console.WriteLine("\t" + ofList.Name + "\t" + ofList.Department + "\t" + ofList.JobTitle);
-                    }
-                    Console.WriteLine("Запрос был выполнен инициализацией List");
-                }
-            }
-
-            static void GetConnect()
-            {
-                var connectionString = ConfigurationManager.ConnectionStrings["dbContext"].ConnectionString;
-            
-                var con = new SqlConnection(connectionString);
-                con.Open();
-            }
-
-            static void EraseData()
-            {
-            }
-
-            static void Test()
-            {
-                using (var context = new dbContext())
-                {
-                    Employee emp = new Employee();
-                    var listOfProgr = from ls in context.Employees
-                        select ls;
-
-                    foreach (var list in listOfProgr)
-                    {
-                        Console.WriteLine(list);
-                    }
-                }
+                SampleEmployee progr = new SampleEmployee();
+                context.Employees.AddRange(progr.programmers);
+                context.SaveChanges();
             }
         }
+
+        static void GetDataLinq()
+        {
+            using (var context = new dbContext())
+            {
+                var listOfEmp = from ls in context.Employees select ls;
+
+                foreach (var s in listOfEmp)
+                {
+                    Console.WriteLine(s.Name);
+                }
+            }
+
+            Console.WriteLine("Запрос был выполнен инициализацией linq");
+        }
+
+        static void GetDataList()
+        {
+            using (var context = new dbContext())
+            {
+                var lisfOfProgrammers = context.Employees.ToList();
+                foreach (Employee ofList in lisfOfProgrammers)
+                {
+                    Console.WriteLine("\t" + ofList.Name + "\t" + ofList.Department + "\t" + ofList.JobTitle);
+                }
+                Console.WriteLine("Запрос был выполнен инициализацией List");
+            }
+        }
+        public IEnumerable GetIEnumerable()
+        {
+            var context = new dbContext();
+            IEnumerable<Employee> fggg = context.Employees;
+            var l_fggg = from fgg in fggg select fggg;
+            
+
+        }
+
+        static void GetConnect()
+        {
+            var connectionString = ConfigurationManager.ConnectionStrings["dbContext"].ConnectionString;
+
+            var con = new SqlConnection(connectionString);
+            con.Open();
+        }
+
+        static void EraseData()
+        {
+            using (var context = new dbContext())
+            {
+                if (l_fggg.Any) context.Employees.RemoveRange(fggg); else Console.WriteLine("БД Пуста...");
+                context.SaveChanges();
+            }
+        }
+
+        static void Test()
+        {
+            using (var context = new dbContext())
+            {
+                Employee emp = new Employee();
+                var listOfProgr = from ls in context.Employees
+                                  select ls;
+                foreach (var list in listOfProgr) Console.WriteLine(list);
+
+            }
+        }
+
     }
+}
+
+
