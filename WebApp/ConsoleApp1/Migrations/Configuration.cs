@@ -5,7 +5,7 @@ namespace ConsoleApp1.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ConsoleApp1.dbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ConsoleApp1.AppDbContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace ConsoleApp1.Migrations
             ContextKey = "ConsoleApp1.dbContext";
         }
 
-        protected override void Seed(ConsoleApp1.dbContext context)
+        protected override void Seed(ConsoleApp1.AppDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

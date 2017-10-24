@@ -67,7 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dbContext.cs" />
+    <Compile Include="AppDbContext.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Migrations\201710180630009_InitialCreate.cs" />
     <Compile Include="Migrations\201710180630009_InitialCreate.Designer.cs">

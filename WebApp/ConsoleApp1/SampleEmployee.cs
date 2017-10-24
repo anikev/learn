@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
     class SampleEmployee
     {
-        public List<Employee> programmers = new List<Employee>{new Employee
-        {
-            Name = "Токмаков Владимир Александрович",
-            Department = "АСУ",
-            JobTitle = "Программист"
-        },new Employee
+        public List<Employee> Programmers = new List<Employee>{
+            new Employee
+            {
+                Name = "Токмаков Владимир Александрович",
+                Department = "АСУ",
+                JobTitle = "Программист"
+            },
+            new Employee
             {
                 Name = "Гамеров Сергей Александрович",
                 Department = "АСУ",
@@ -34,7 +32,7 @@ namespace ConsoleApp1
                 Department = "АСУ",
                 JobTitle = "Програмист"
             }
-            
+
         };
     }
 }

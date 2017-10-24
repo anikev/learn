@@ -24,3 +24,17 @@ C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
 C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.Migrations.InitialCreate.resources
 C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.GenerateResource.Cache
+F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.Migrations.InitialCreate.resources
+F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.GenerateResource.Cache
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.xml
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\bin\Debug\ru\EntityFramework.resources.dll
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.Migrations.InitialCreate.resources
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.GenerateResource.Cache
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+\\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
