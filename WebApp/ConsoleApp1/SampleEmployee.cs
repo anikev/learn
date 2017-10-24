@@ -4,35 +4,19 @@ namespace ConsoleApp1
 {
     class SampleEmployee
     {
-        public List<Employee> Programmers = new List<Employee>{
-            new Employee
+        public void AddEmp()
+        {
+            using (var context = new AppDbContext())
             {
-                Name = "Токмаков Владимир Александрович",
-                Department = "АСУ",
-                JobTitle = "Программист"
-            },
-            new Employee
-            {
-                Name = "Гамеров Сергей Александрович",
-                Department = "АСУ",
-                JobTitle = "Программист"
-            },new Employee
-            {
-                Name = "Жуков Тарас Игоревич",
-                Department = "АСУ",
-                JobTitle = "Программист"
-            },new Employee
-            {
-                Name = "Бутяев Алексей Васильевич",
-                Department = "АСУ",
-                JobTitle = "Программист"
-            }, new Employee
-            {
-                Name = "Аникьев Петр Александрович",
-                Department = "АСУ",
-                JobTitle = "Програмист"
-            }
 
-        };
+                Department dept = new Department { Name = "АСУ" };
+                context.Departments.Add(dept);
+                Employee emp = new Employee { Department = dept, Name = "Аникьев П.А." };
+                context.Employees.Add(emp);
+
+
+            }
+                
+        }
     }
 }

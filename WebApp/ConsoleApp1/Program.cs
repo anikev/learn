@@ -41,7 +41,8 @@ namespace ConsoleApp1
             using (var context = new AppDbContext())
             {
                 var progr = new SampleEmployee();
-                context.Employees.AddRange(progr.Programmers);
+                
+                progr.AddEmp();
                 context.SaveChanges();
                 Console.WriteLine("Успешно");
             }

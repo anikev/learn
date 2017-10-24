@@ -1,0 +1,2 @@
+F:\Git\learn\WebApp\ConsoleApp2\obj\Debug\ConsoleApp2.csprojResolveAssemblyReference.cache
+F:\Git\learn\WebApp\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache

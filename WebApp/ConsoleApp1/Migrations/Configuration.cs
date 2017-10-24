@@ -10,7 +10,7 @@ namespace ConsoleApp1.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "ConsoleApp1.dbContext";
+            ContextKey = "ConsoleApp1.AppDbContext";
         }
 
         protected override void Seed(ConsoleApp1.AppDbContext context)

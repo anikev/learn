@@ -16,6 +16,8 @@ namespace ConsoleApp1.Migrations
                         JobTitle = c.String(),
                         Department = c.String(),
                         EmploymentDateFrom = c.DateTime(),
+                        TestField = c.String(),
+                        Skill = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
