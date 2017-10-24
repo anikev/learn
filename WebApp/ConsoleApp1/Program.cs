@@ -30,8 +30,9 @@ namespace ConsoleApp1
                 case 4:
                     Test();
                     break;
-            }
 
+            }
+            
             Console.ReadLine();
         }
 
@@ -84,15 +85,7 @@ namespace ConsoleApp1
             con.Open();
         }
 
-        //static void EraseData()
-        //{
-        //    using (var context = new dbContext())
-        //    {
-        //        IEnumerable<IEnumerable<Employee>> employees = GetIEnumerable();
-        //        if (employees.Any()) context.Employees.RemoveRange(employees); else Console.WriteLine("БД Пуста...");
-        //        context.SaveChanges();
-        //    }
-        //}
+       
 
         static void Test()
         {
