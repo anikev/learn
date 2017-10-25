@@ -12,19 +12,11 @@ namespace ConsoleApp1
         public string TestField { get; set; }
         public int Skill { get; set; }
 
-        public Department Department { get; set; }
+        public virtual Department Department { get; set; }
 
         
 
-
     }
-    public class Department
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-        public List< Employee> Employees { get; set; }
-
-    }
-
+    
+    
 }

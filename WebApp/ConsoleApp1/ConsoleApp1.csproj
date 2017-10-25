@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+    <Compile Include="Department.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Migrations\201710241319015_InitialCreate.cs" />
     <Compile Include="Migrations\201710241319015_InitialCreate.Designer.cs">

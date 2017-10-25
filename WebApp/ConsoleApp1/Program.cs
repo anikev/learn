@@ -32,7 +32,7 @@ namespace ConsoleApp1
                     break;
 
             }
-            
+
             Console.ReadLine();
         }
 
@@ -40,13 +40,41 @@ namespace ConsoleApp1
         {
             using (var context = new AppDbContext())
             {
-                var progr = new SampleEmployee();
-                
-                progr.AddEmp();
+
+                var dept = new Department { Name = "ИТО" };
+                context.Departments.Add(dept);
+
+                var emp = new Employee
+                {
+                    Name = "Аникьев", Department = dept
+
+                };
+                Console.WriteLine(emp.Name + "\t" + emp.Department);
+                context.Employees.Add(emp);
                 context.SaveChanges();
-                Console.WriteLine("Успешно");
             }
+
+
+
+
+
+
+            //Department dept = new Department { Name = "АСУ"};
+
+            //context.Departments.Add(dept);
+            //context.SaveChanges();
+            //Console.WriteLine("Добавили  "  + dept.Name);
+
+
+            //var progr = new SampleEmployee();
+
+            //progr.AddEmp();
+            //context.SaveChanges();
+            Console.WriteLine("Успешно");
+
+
         }
+
 
         static void GetDataLinq()
         {
@@ -86,7 +114,7 @@ namespace ConsoleApp1
             con.Open();
         }
 
-       
+
 
         static void Test()
         {
