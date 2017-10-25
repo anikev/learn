@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Configuration;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
+
 
 namespace ConsoleApp1
 {
@@ -9,7 +11,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            GetConnect();
+            BuildConnectionString();
+            Database.SetInitializer(
+                new DropCreateDatabaseIfModelChanges<AppDbContext>());
+            
             Console.WriteLine("Connect cucess!");
             Console.WriteLine("1 - Добавить данные из класса SampleEmployee");
             Console.WriteLine("2 - Выборка данных List<>");
@@ -27,9 +32,7 @@ namespace ConsoleApp1
                 case 3:
                     GetDataLinq();
                     break;
-                case 4:
-                    Test();
-                    break;
+                
 
             }
 
@@ -104,32 +107,46 @@ namespace ConsoleApp1
             }
         }
 
-
-
-        static void GetConnect()
+        private static void BuildConnectionString()
         {
-            var connectionString = ConfigurationManager.ConnectionStrings["dbContext"].ConnectionString;
+            ConnectionStringSettings settings =
+                ConfigurationManager.ConnectionStrings["dbContext"];
 
-            var con = new SqlConnection(connectionString);
-            con.Open();
-        }
-
-
-
-        static void Test()
-        {
-            using (var context = new AppDbContext())
+            if (null != settings)
             {
-                var emp = new Employee();
-                var listOfProgr = from ls in context.Employees
-                                  select ls;
-                foreach (var list in listOfProgr)
-                    Console.WriteLine(list);
+                string connectString = settings.ConnectionString;
+              
+                SqlConnectionStringBuilder builder =
+                    new SqlConnectionStringBuilder(connectString);
 
+                builder.DataSource = Environment.MachineName + @"\SQLEXPRESS";
+                
+                
+                var con = new SqlConnection(connectString);
+                   con.Open();
             }
         }
 
+        //static void GetConnect()
+        //{
+        //    ConnectionStringSettings settings =
+        //        ConfigurationManager.ConnectionStrings["dbContext"];
+        //    string connectString = settings.ConnectionString;
+        //    SqlConnectionStringBuilder builder =
+        //        new SqlConnectionStringBuilder(connectString);
+        //    builder.DataSource = "dfff";
+
+
+
+
+        //var con = new SqlConnection(connectString);
+        //    con.Open();
+        }
+
+
+    
+
     }
-}
+
 
 

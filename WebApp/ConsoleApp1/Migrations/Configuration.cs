@@ -9,7 +9,7 @@ namespace ConsoleApp1.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "ConsoleApp1.AppDbContext";
         }
 
