@@ -114,15 +114,15 @@ namespace ConsoleApp1
 
             if (null != settings)
             {
+                
                 string connectString = settings.ConnectionString;
-              
+               
                 SqlConnectionStringBuilder builder =
                     new SqlConnectionStringBuilder(connectString);
 
                 builder.DataSource = Environment.MachineName + @"\SQLEXPRESS";
-                
-                
-                var con = new SqlConnection(connectString);
+               
+                var con = new SqlConnection(builder.ConnectionString);
                    con.Open();
             }
         }
