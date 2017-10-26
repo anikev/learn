@@ -34,5 +34,3 @@ C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
 \\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 \\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 \\Mac\Home\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
-C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.Migrations.InitialCreate.resources
-C:\GIT\Learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.GenerateResource.Cache

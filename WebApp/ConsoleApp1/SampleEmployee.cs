@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleApp1
 {
@@ -9,20 +10,35 @@ namespace ConsoleApp1
         {
             using (var context = new AppDbContext())
             {
+                List<Department> dept = new List<Department>
+                {
+                    new 
+                        Department {Name = "АСУ"},
+                    new
+                        Department {Name = "Отдел кадров"},
+                    new
+                        Department {Name = "Планово-экономический отдел"},
+                    new
+                        Department {Name = "Расчетый отдел"}
+                };
 
-                
-                //Employee emp = new Employee { Department = dept, Name = "Аникьев П.А." };
-                //context.Employees.Add(emp);
-                //context.SaveChanges();
-                //Console.WriteLine("Добавили" + emp.Name);
-                Department dept = new Department { Name = "АСУ" };
-                context.Departments.Add(dept);
+                context.Departments.AddRange(dept);
                 context.SaveChanges();
-                Console.WriteLine("Добавили" + dept.Name);
 
-
+                var Staff = new List<Employee>
+                {
+                    new
+                        Employee {Name = "Аникьев Петр Александрович",Department = dept.Find(d =>d.Name == "АСУ")},
+                    new
+                        Employee {Name = "Гамерв Сергей Александрович",Department = dept.Find(d =>d.Id == 4)},
+                    new 
+                        Employee {Name = "Токмаков Владимир Александрович"}
+                };
+                context.Employees.AddRange(Staff);
+                context.SaveChanges();
             }
-                
+            ;
         }
     }
 }
+
