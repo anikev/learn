@@ -6,7 +6,6 @@ F:\Git\learn\WebApp\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.dll
 F:\Git\learn\WebApp\ConsoleApp1\bin\Debug\EntityFramework.xml
 F:\Git\learn\WebApp\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.xml
 F:\Git\learn\WebApp\ConsoleApp1\bin\Debug\ru\EntityFramework.resources.dll
-F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
 F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 F:\Git\learn\WebApp\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
