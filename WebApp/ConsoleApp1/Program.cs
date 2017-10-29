@@ -1,4 +1,6 @@
 ﻿using System;
+using System.CodeDom;
+using System.Collections;
 using System.Configuration;
 using System.Data.Entity;
 using System.Data.SqlClient;
@@ -12,7 +14,14 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             BuildConnectionString();
+            Switch();
             
+
+
+        }
+
+        static void Switch()
+        {
             Console.WriteLine("Connect cucess!");
             Console.WriteLine("1 - Добавить данные из класса SampleEmployee");
             Console.WriteLine("2 - Выборка данных List<>");
@@ -30,11 +39,33 @@ namespace ConsoleApp1
                 case 3:
                     GetDataLinq();
                     break;
-                
+                case 4:
+                    Test();
+                    break;
+
+
+
 
             }
+        }
 
-            Console.ReadLine();
+        static void Test()
+        {
+            using (var context = new AppDbContext())
+            {
+                IQueryable<Employee> emp = context.Employees;
+                IQueryable<Department> dep = context.Departments;
+
+                //var ListofEmp = emp.Join(dep, e => e.Department, d => d.Id,
+                //    (e, d) => new {name = e.Name, department = d.Name}
+                var ListofEmp = emp.Where(e =>e.Id == 1 );
+                foreach (var employees in ListofEmp)
+                { 
+                    Console.WriteLine(employees.Name);
+                }
+                 
+                Console.WriteLine("Конец");
+            }
         }
 
         static void AddEmployee()
@@ -82,16 +113,16 @@ namespace ConsoleApp1
 
             if (null != settings)
             {
-                
+
                 string connectString = settings.ConnectionString;
-               
+
                 SqlConnectionStringBuilder builder =
                     new SqlConnectionStringBuilder(connectString);
 
                 builder.DataSource = Environment.MachineName + @"\SQLEXPRESS";
-               
+
                 var con = new SqlConnection(builder.ConnectionString);
-                   con.Open();
+                con.Open();
             }
         }
 
@@ -109,12 +140,12 @@ namespace ConsoleApp1
 
         //var con = new SqlConnection(connectString);
         //    con.Open();
-        }
-
+    }
+}
 
     
 
-    }
+    
 
 
 

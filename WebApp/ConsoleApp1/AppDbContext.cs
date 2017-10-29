@@ -10,6 +10,10 @@ namespace ConsoleApp1
         // 
         // If you wish to target a different database and/or database provider, modify the 'dbContext' 
         // connection string in the application configuration file.
+        static AppDbContext()
+        {
+            Database.SetInitializer<AppDbContext>(new SampleEmployee());;
+        }
         public AppDbContext()
             : base("name=dbContext")
         {
