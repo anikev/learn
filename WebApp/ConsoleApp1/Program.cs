@@ -14,7 +14,12 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             BuildConnectionString();
-            Switch();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Switch();
+            }
+           
             
 
 
@@ -43,10 +48,8 @@ namespace ConsoleApp1
                     Test();
                     break;
 
-
-
-
             }
+            Console.Clear();
         }
 
         static void Test()
@@ -100,7 +103,7 @@ namespace ConsoleApp1
                 var lisfOfProgrammers = context.Employees.ToList();
                 foreach (Employee ofList in lisfOfProgrammers)
                 {
-                    Console.WriteLine("\t" + ofList.Name + "\t" + ofList.Department + "\t" + ofList.JobTitle);
+                    Console.WriteLine("\t" + ofList.Name + "\t" + ofList.Department.Name + "\t" + ofList.JobTitle);
                 }
                 Console.WriteLine("Запрос был выполнен инициализацией List");
             }
